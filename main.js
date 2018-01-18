@@ -5,7 +5,7 @@ function addToShoppingList(event) {
   $('#js-shopping-list-form').submit(event => {
     event.preventDefault();
     $('ul').append(
-      '<li>' + $('.js-shopping-list-entry').val() + $('ul li').append() + '</li>'
+      '<li>' + $('.js-shopping-list-entry').val().addClass('.shopping-list > li') + '</li>'
     );
     console.log($('ul li'));
   });
