@@ -1,27 +1,22 @@
 //User can add item into list
 'use strict';
 
-$(function() {
+function addToShoppingList(event) {
   $('#js-shopping-list-form').submit(event => {
-    const userTextElement = $(event.currentTarget).find('.js-shopping-list-entry');
-    userTextElement.append();
-  });  
-});
-
-$(function() {
-  
-  $('button').click(function(event) {
+    event.preventDefault();
     $('ul').append(
-      '<li>' +
-      $('.js-display-user-text').text;
-    '</li>'
+      '<li>' + $('.js-shopping-list-entry').val() + '</li>'
     );
+    console.log($('.js-shopping-list-entry'));
   });
   
-  $('ul').on('click', 'li', function(event) {
-    this.remove();
-  });
-});
+//.submit(), preventDefault(), toggleClass(), and closest().
+  // $('ul').on('click', 'li', function(event) {
+  //   this.remove();
+  // });
+}
+
+  $(addToShoppingList());
 //User can remove item
 
 //User can check and uncheck item
